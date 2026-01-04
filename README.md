@@ -25,15 +25,15 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 ## Bronze & Silver Rules
 
 - Names must start with the source system name (e.g. crm, erp) and table names must match their original names without renaming.
-- **<sourcesystem>_<entity>**
+- **sourcesystem_entity**
 - Example: crm_sales_details - Sales details from the CRM system.
 
 ## Gold Rules
 
 - All names must use mraningful, business-aligned names for tabless, starting with the category prefix.
-- <category>_<entity>
-    - <category>: Describes the role of the table, such as dim (dimension) or fact (fact table)
-    - <entity>: Descriptive name of the table, aligned with the business domain (e.g. customers, products, sales)
+- category_entity
+    - category: Describes the role of the table, such as dim (dimension) or fact (fact table)
+    - entity: Descriptive name of the table, aligned with the business domain (e.g. customers, products, sales)
     - Examples
         - dim_customers - Dimension table for customer data.
         - fact_sales - Fact table containing sales transactions.
@@ -51,21 +51,21 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 ## Surrogate Keys
 
 - All primary keys in dimension tables must use the suffix _key
-- <table_name>_key
-    - <table_name>: Refers to the name of the table or entity the key belongs to.
+- table_name_key
+    - table_name: Refers to the name of the table or entity the key belongs to.
     - _key: A suffix indicating that this column  is a surrogate key.
     - Example: customer_key - Surrogate key in the dim_customers table.
 
 ## Technical Columns
 
 - All technical columns must start with the prefix dwh_, followed by a descriptive name indicating the column’s purpose.
-- dwh_<column_name>
+- dwh_column_name
     - dwh: Prefix exclusively for system-generated metadata.
-    - <column_name>: Descriptive name indincating the column’s purpose.
+    - column_name: Descriptive name indincating the column’s purpose.
     - Example: dwh_load_date - System generated column used to store the date when the record was loaded.
 
 # Stored Procedure
 
 - All sored procedures used for loading data must follow the naming pattern: load_<layer>
-    - <layer>: Represents the layer being loaded, such as bronze, silver or gold.
+    - layer: Represents the layer being loaded, such as bronze, silver or gold.
     - Example: load_bronze - Sored procedure for loading data into the Bronze layer.

@@ -16,7 +16,6 @@ Usage example:
 	EXEC Silver.load_silver
 ==========================================================
 */
-
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
 
@@ -82,7 +81,7 @@ BEGIN
 
 		SET @start_time = GETDATE()
 
-		TRUNCATE TABLE silver.crm_cust_info
+		TRUNCATE TABLE silver.crm_prd_info
 		PRINT 'Inserting data into table: silver.crm_prd_info'
 
 		INSERT INTO silver.crm_prd_info (
@@ -120,7 +119,7 @@ BEGIN
 
 		SET @start_time = GETDATE()
 
-		TRUNCATE TABLE silver.crm_cust_info
+		TRUNCATE TABLE silver.crm_sales_details
 		PRINT 'Inserting data into table: silver.crm_sales_details'
 
 		INSERT INTO silver.crm_sales_details (
@@ -170,7 +169,7 @@ BEGIN
 
 		SET @start_time = GETDATE()
 
-		TRUNCATE TABLE silver.crm_cust_info
+		TRUNCATE TABLE silver.erp_cust_az12
 		PRINT 'Inserting data into table: silver.erp_cust_az12'
 
 		INSERT INTO silver.erp_cust_az12 (
@@ -204,7 +203,7 @@ BEGIN
 
 		SET @start_time = GETDATE()
 
-		TRUNCATE TABLE silver.crm_cust_info
+		TRUNCATE TABLE silver.erp_loc_a101
 		PRINT 'Inserting data into table: silver.erp_loc_a101'
 
 		INSERT INTO silver.erp_loc_a101 (
@@ -227,7 +226,7 @@ BEGIN
 
 		SET @start_time = GETDATE()
 
-		TRUNCATE TABLE silver.crm_cust_info
+		TRUNCATE TABLE silver.erp_px_cat_g1v2
 		PRINT 'Inserting data into table: silver.erp_px_cat_g1v2'
 
 		INSERT INTO silver.erp_px_cat_g1v2 (

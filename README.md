@@ -20,7 +20,7 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - Language: English
 - Do not use reserved SQL words as object names.
 
-# Table Naming Conveentions
+# Table Naming Conventions
 
 ## Bronze & Silver Rules
 

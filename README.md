@@ -78,3 +78,13 @@ This project involves:
 - All sored procedures used for loading data must follow the naming pattern: load_<layer>
     - layer: Represents the layer being loaded, such as bronze, silver or gold.
     - Example: load_bronze - Sored procedure for loading data into the Bronze layer.
+
+# Data Architecture
+
+Data Architecture for this project follows Medallion Architecture: Bronze, Silver and Gold Layers.
+
+![Data Architecture.png](attachment:ae07410c-7f19-4c95-861d-5f6fd4112ce8:Data_Architecture.png)
+
+1. **Bronze Layer:** Stores raw data as-is from the source systems. Data is ingested from CSV files into SQL Server Database.
+2. **Silver Layer:** Includes data cleansing, standarization and normalization processes to prepare data for analysis.
+3. **Gold Layer:** Houses business-ready data modeled into a star schema required for reporting and analytics.

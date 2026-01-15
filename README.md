@@ -14,6 +14,15 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - Scope: Focus on the latest dataset only; historization of data is not required.
 - Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics team.
 
+## Project Overview
+
+This project involves:
+
+1. **Data Architecture:** Designing a Modern Data Warehouse using Medallion Architecture Bronze, Silver and Gold Layers.
+2. **ETL Pipelines:** Extracting, Transforming and Loading data from source systems into the Warehouse.
+3. **Data Modeling:** Developing fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting:** Creating SQL-based reports and dashboards for actionable insights.
+
 # General Principles
 
 - Naming Convention: Use snake_case, with lowercase letters and underscores (_) to separate words.
